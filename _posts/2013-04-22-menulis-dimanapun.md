@@ -6,7 +6,7 @@ title: Menulis Dimanapun
 {{ page.title }}
 ================
 
-<p class="meta">22 April 2013 - Malang</p>
+<p class="meta">22 April 2013</p>
 
 Kalo dibayangin, bikin tulisan (artikel, buku, resensi, ngeblog, dsb) lewat
 [feature phone][1] kayaknya lebih sulit dibandingkan kalo lewat smartphone.
