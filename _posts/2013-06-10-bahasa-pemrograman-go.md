@@ -14,7 +14,7 @@ title: Bahasa Pemrograman Go
 Diciptakan oleh Rob Pike, Ken Thompson, dan Robert Griesemer. Pertama kali
 dikembangkan dan didesain di Google dan kemudian dijadikan proyek open
 source. Terkenal di kalangan programmer python dan ruby meskipun pada
-awalnya ditujukan pengganti C dan C++. Karena kelebihan mekanisme
+awalnya ditujukan sebagai pengganti C dan C++. Karena kelebihan mekanisme
 konkurensinya, go banyak digunakan untuk *back-end* pada server.
 
 Memulai Go di Ubuntu
