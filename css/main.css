@@ -25,14 +25,20 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
+a         { color: #0a0; }
 a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a:visited { color: #040; }
 
 table {
   font-size: inherit;
   font: 100%;
 }
+
+.clear { clear: both; }
+
+.float-left { float: left; }
+
+.float-right { float: right; }
 
 /*****************************************************************************/
 /*
@@ -49,7 +55,7 @@ ul.posts li {
 }
 
 ul.posts span {
-  color: #666;
+  color: #000;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
@@ -68,6 +74,11 @@ ul.posts span {
   line-height: 1.5em;
 }
 
+.site .header {
+  border-bottom: 4px solid #0a0;
+  margin-bottom: 2em;
+}
+
 .site .header a {
   font-weight: bold;
   text-decoration: none;
@@ -75,7 +86,6 @@ ul.posts span {
 
 .site .header h1.title {
   display: inline-block;
-  margin-bottom: 2em;
 }
 
 .site .header h1.title a {
@@ -86,23 +96,18 @@ ul.posts span {
   color: #000;
 }
 
-.site .header a.extra {
-  color: #666;
-  margin-left: 1em;
-}
-
 .site .header a.extra:hover {
   color: #000;
 }
 
 .site .meta {
-  color: #666;
+  color: #444;
 }
 
 .site .footer {
   font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
+  color: #000;
+  border-top: 4px solid #0a0;
   margin-top: 2em;
   overflow: hidden;
 }
@@ -113,7 +118,7 @@ ul.posts span {
 }
 
 .site .footer .contact a {
-  color: #8085C1;
+  color: #0a0;
 }
 
 .site .footer .rss {
@@ -166,9 +171,6 @@ ul.posts span {
 
 #post img {
    float: left;
-   margin: 0 1em 1em 0;
+   margin: 1em;
 }
 
-.clear {
-   clear: both;
-}
