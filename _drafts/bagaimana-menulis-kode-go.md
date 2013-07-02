@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bagaimana Menulis Kode Go
+categories: programming
 ---
 
 ![Gopher - Maskot Bahasa Go](/images/gopherbw-small.png)
