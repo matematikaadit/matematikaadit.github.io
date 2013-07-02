@@ -29,31 +29,30 @@ packages.
 Untuk memberi ide bagaimana suatu workspace terlihat dalam praktiknya,
 berikut contohnya:
 
-    bin/
-      streak    # perintah executable
-      todo      # perintah executable
-    pkg/
-      linux_amd64/
-        code.google.com/p/goauth2/
-          auth.a  # package object
-        github.com/nf/todo
-          task.a  # package object
-    src/
-      code.google.com/p/goauth2/
-        .hg/
-        oauth/
-          oauth.go
-          oauth_test.go
-      github.com/nf/
-        strak/
-          .git
-          oauth.go
-          streak.go
-        todo/
-          .git/
-          task/
-            task.go
-          todo.go
+{% highlight text %}
+$GOPATH
+├── bin
+│   ├── gh
+│   ├── gotour
+│   └── hello
+├── pkg
+│   └── linux_386
+│       └── github.com
+│           └── banthar
+│               └── Go-SDL
+│                   ├── gfx.a
+│                   ├── mixer.a
+│                   ├── sdl.a
+│                   └── ttf.a
+└── src
+    └── github.com
+        └── matematikaadit
+            ├── hello
+            │   └── hello.go
+            └── newmath
+                ├── sqrt.go
+                └── sqrt_test.go
+{% endhighlight %}
 
 Workspace diatas memuat tiga repositori (goauth2, streak, dan todo) yang
 menghasilkan dari dua perintah (streak dan todo) dan dua pustaka (oauth dan
@@ -72,9 +71,13 @@ Untuk memulai, buat direktori workspace anda dan set GOPATH sesuai
 dengannya. Sebagai contoh, $HOME/go akan dijadikan sebagai workspace di
 sini.
 
-    $ mkdir $HOME/go
-    $ export GOPATH=$HOME/go
+{% highlight sh %}
+$ mkdir $HOME/go
+$ export GOPATH=$HOME/go
+{% endhighlight %}
 
 untuk lebih mudahnya, tambahkan direktori bin-nya workspace ke dalam PATH:
 
-    $ export PATH=$PATH:$GOPATH/bin
+{% highlight sh %}
+$ export PATH=$PATH:$GOPATH/bin
+{% endhighlight %}
