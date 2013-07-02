@@ -3,11 +3,6 @@ layout: post
 title: Bagaimana Menulis Kode Go
 ---
 
-{{ page.title }}
-================
-
-<p class="meta">12 Juni 2013</p>
-
 ![Gopher - Maskot Bahasa Go](/images/gopherbw-small.png)
 
 Organisasi Kode

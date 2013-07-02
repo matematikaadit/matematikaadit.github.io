@@ -1,12 +1,8 @@
 ---
 layout: post
-title: Bahasa Pemrograman Go
+title: "Bahasa Pemrograman Go"
+categories: programming
 ---
-
-{{ page.title }}
-================
-
-<p class="meta">10 Juni 2013</p>
 
 ![Gopher - Maskot Bahasa Go](/images/gopherbw-small.png)
 
@@ -17,8 +13,7 @@ source. Terkenal di kalangan programmer python dan ruby meskipun pada
 awalnya ditujukan sebagai pengganti C dan C++. Karena kelebihan mekanisme
 konkurensinya, go banyak digunakan untuk *back-end* pada server.
 
-Memulai Go di Ubuntu
---------------------
+<h2 class="clear">Memulai Go di Ubuntu</h2>
 
 Berikut instruksi untuk memulai Go di Ubuntu. Diawali dari download
 binarynya sampai menjalankan program "hello world".

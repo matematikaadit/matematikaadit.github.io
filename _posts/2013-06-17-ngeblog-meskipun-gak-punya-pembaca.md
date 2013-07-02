@@ -1,12 +1,8 @@
 ---
 layout: post
-title: Kalian Harus Ngeblog Meskipun Gak Punya Pembaca
+title: "Kalian Harus Ngeblog Meskipun Gak Punya Pembaca"
+categories: menulis
 ---
-
-{{ page.title }}
-================
-
-<p class="meta">17 Juni 2013</p>
 
 ... Ahem ... Tapi kalian gak harus ngeblog. Yang saya tulis di atas saya
 tujukan buat saya sendiri―dan tentunya buat mereka yang merasa memang

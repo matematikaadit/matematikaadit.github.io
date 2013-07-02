@@ -1,19 +1,16 @@
 ---
 layout: post
-title: Menulis Dimanapun
+title: "Menulis Dimanapun"
+categories: menulis
 ---
 
-{{ page.title }}
-================
-
-<p class="meta">22 April 2013</p>
-
 Kalo dibayangin, bikin tulisan (artikel, buku, resensi, ngeblog, dsb) lewat
-[feature phone][1] kayaknya lebih sulit dibandingkan kalo lewat smartphone.
-Di feature phone gak ada aplikasi notes yang canggih. Browser-nya pun
-paling banter Opera Mini. Fasilitas buat nulis ya message itu aja. Itupun
-juga terbatas jumlah karakternya. Yang agak mumpuni mungkin bisa sampai
-1000 karakter. Tapi yang gak beruntung palingan cuman 255 karakter.
+[feature phone][feature-phone] kayaknya lebih sulit dibandingkan kalo lewat
+smartphone.  Di feature phone gak ada aplikasi notes yang canggih.
+Browser-nya pun paling banter Opera Mini. Fasilitas buat nulis ya message
+itu aja. Itupun juga terbatas jumlah karakternya. Yang agak mumpuni mungkin
+bisa sampai 1000 karakter. Tapi yang gak beruntung palingan cuman 255
+karakter.
 
 Tapi jangan salah. Bukan berarti keterbatasan tadi jadi hambatan.
 Kalo niat udah mantep, apapun mediumnya gak bakal jadi masalah. Ini nih
@@ -27,4 +24,4 @@ lagi nganggur, pas lagi bosen, atau justru pas lagi semangat-semangatnya.
 
 Selamat menulis, selamat berkarya!
 
-[1]: http://en.wikipedia.org/wiki/Feature_phone
+[feature-phone]: http://en.wikipedia.org/wiki/Feature_phone
