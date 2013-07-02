@@ -1,5 +1,5 @@
 /* TEAM */
-Writer: Adit Cahya Ramadhan
+Blog Writer: Adit Cahya Ramadhan
 Contact: adit [at] kasinoda [dot] org
 Twitter: @aditcr8
 From: Bangil, Indonesia
@@ -7,7 +7,8 @@ From: Bangil, Indonesia
 /* THANKS */
 Jekyll and This Site's Original Theme Creator: Tom Preston-Werner
 Twitter: @mojombo
-From: Github HQ
+Site: tom.preston-werner.com
+From: San Fransisco
 
 /* SITE */
 Last update: 2013/07/02
