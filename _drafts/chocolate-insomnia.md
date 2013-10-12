@@ -47,6 +47,8 @@ ketika libur. It's a hell of work and writing. But Love it.
 
 ### Dan Liriknya...
 
+Chocolate Insomnia by Yui Horie (Nekomonogatari White OP)
+
 {% hightlight txt %}
 Sorry
 I always cause trouble for you like this
