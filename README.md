@@ -99,11 +99,11 @@ Kenapa pengen bikin OS? Apa karena kelihatannya seru...
 
 Jangan percaya pada dirimu sendiri. Percayalah pada diriku yang percaya pada
 dirimu. Kau pengen bikin OS karena kau ditakdirkan untuk bikin satu. OSmu
-itu mungkin gak bakal semewah Machintos. Gak bakal sefriendly MS Windows.
-Gak bakal sehackable linux. Tapi itu OSmu, itu bukan OS orang lain. Karena
-yang bikin dirimu sendiri. Karena yang ngoding dari scratch ya dirimu
-sendiri. OSmu adalah OS yang bakal ngedrill heaven. OSmu adalah OS yang
-bakal ngubah dunia(mu). (Referensi dari TTGL)
+itu mungkin gak bakal semewah OS X. Gak bakal sefriendly MS Windows.  Gak
+bakal sehackable linux. Tapi itu OSmu, itu bukan OS orang lain. Karena yang
+bikin dirimu sendiri. Karena yang ngoding dari scratch ya dirimu. OSmu
+adalah OS yang bakal ngedrill heaven. OSmu adalah OS yang bakal ngubah
+dunia(mu). (Referensi dari TTGL)
 
 Dengan tema besar tersebut blog pribadi ini dinyatakan dibuka kembali.
 Projek besar dengan kode *Chocolate Insomnia* secara resmi dimulai. Let's
