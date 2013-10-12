@@ -13,5 +13,5 @@ From: San Fransisco
 /* SITE */
 Last update: 2013/07/02
 Standards: HTML5, CSS3
-Components: Pygmens css theme
+Components: Pygments css theme
 Software: Jekyll, Git

@@ -19,10 +19,10 @@ direktori dengan tiga direktori di bagian atas sendiri, yakni:
 - _pkg_ berisi _package objects_, dan
 - _bin_ berisi perintah executable.
 
-Go tool membangun source packages dan menginstal hasil binarinya ke dalam
-direktori _pkg_ dan _bin_ masing-masing.
+Go tool membangun source packages dan menginstal hasil binarinya
+masing-masing ke dalam direktori _pkg_ dan _bin_.
 
-Subdirektori `src` biasanya memuat repositori version control (seperti Git
+Subdirektori `src` biasanya memuat version control repositori (seperti Git
 atau Mercurial) yang melacak pengembangan dari satu atau lebih source
 packages.
 
@@ -55,10 +55,10 @@ $GOPATH
 {% endhighlight %}
 
 Workspace diatas memuat tiga repositori (goauth2, streak, dan todo) yang
-menghasilkan dari dua perintah (streak dan todo) dan dua pustaka (oauth dan
+menghasilkan dua command (streak dan todo) dan dua pustaka (oauth dan
 task).
 
-Perintah dan pustaka dibangun dari jenis-jenis source packages yang berbeda.
+Command dan pustaka dibangun dari jenis-jenis source packages yang berbeda.
 Kita akan mendiskusikannya kemudian.
 
 ### GOPATH environment variabel

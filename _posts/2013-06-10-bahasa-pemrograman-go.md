@@ -26,19 +26,19 @@ Ekstrak hasil download tadi ke `/usr/local`. Misal file yang yang
 didownload adalah go1.1.linux-386.tar.gz, maka perintah yang diketikkan
 di terminal:
 
-{% highlight sh %}
+{% highlight console %}
 $ sudo tar -C /usr/local -xvf go1.1.linux-386.tar.gz
 {% endhighlight %}
 
 Tambahkan `/usr/local/go/bin` ke environment variable PATH.
 
-{% highlight sh %}
+{% highlight console %}
 $ echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
 {% endhighlight %}
 
 Agar bisa langsung digunakan, muat ulang isi dari `~/.profile`.
 
-{% highlight sh %}
+{% highlight console %}
 $ . ~/.profile
 {% endhighlight %}
 
@@ -55,7 +55,7 @@ func main() {
 
 Di terminal jalankan perintah berikut:
 
-{% highlight sh %}
+{% highlight console %}
 $ go run halo.go 
 halo, dunia
 {% endhighlight %}

@@ -90,3 +90,21 @@ yang dulu. Inilah
 [matematikaadit.github.io](http://matematikaadit.github.io).
 
 Dan tahukah kalian, kalian harus ngeblog meskipun gak punya pembaca.
+
+# Kembali dengan Sesuatu yang Besar
+
+Sat Oct 12 18:08:48 WIT 2013
+
+Kenapa pengen bikin OS? Apa karena kelihatannya seru...
+
+Jangan percaya pada dirimu sendiri. Percayalah pada diriku yang percaya pada
+dirimu. Kau pengen bikin OS karena kau ditakdirkan untuk bikin satu. OSmu
+itu mungkin gak bakal semewah Machintos. Gak bakal sefriendly MS Windows.
+Gak bakal sehackable linux. Tapi itu OSmu, itu bukan OS orang lain. Karena
+yang bikin dirimu sendiri. Karena yang ngoding dari scratch ya dirimu
+sendiri. OSmu adalah OS yang bakal ngedrill heaven. OSmu adalah OS yang
+bakal ngubah dunia(mu). (Referensi dari TTGL)
+
+Dengan tema besar tersebut blog pribadi ini dinyatakan dibuka kembali.
+Projek besar dengan kode *Hira Matrix* secara resmi dimulai. Let's make an
+OS. Let's the fun begin.
