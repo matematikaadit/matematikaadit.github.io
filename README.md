@@ -106,5 +106,5 @@ sendiri. OSmu adalah OS yang bakal ngedrill heaven. OSmu adalah OS yang
 bakal ngubah dunia(mu). (Referensi dari TTGL)
 
 Dengan tema besar tersebut blog pribadi ini dinyatakan dibuka kembali.
-Projek besar dengan kode *Hira Matrix* secara resmi dimulai. Let's make an
-OS. Let's the fun begin.
+Projek besar dengan kode *Chocolate Insomnia* secara resmi dimulai. Let's
+make an OS. Let's the fun begin.
