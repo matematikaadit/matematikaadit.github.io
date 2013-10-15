@@ -40,11 +40,6 @@ semangat. Siapkan kopi-susu-cokelat hangat dalam segelas cangkir putih yang
 bersih. Start loving what you do. Start do what'll you love. And hoping
 someone will love you for what you do.
 
-Kerja mulai hari 1. Tulis blog/draftnya mulai hari 1. Tiada hari tanpa
-menuliskan apa yang sudah dikerjakan. Koding mulai hari 2. Dan libur
-seperlunya. Tapi meskipun libur, tulis juga refleksi apa yang dilakukan
-ketika libur. It's a hell of work and writing. But Love it.
-
 ### Dan Liriknya...
 
 Chocolate Insomnia by Yui Horie (Nekomonogatari White OP)
