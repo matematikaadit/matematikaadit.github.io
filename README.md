@@ -108,3 +108,21 @@ dunia(mu). (Referensi dari TTGL)
 Dengan tema besar tersebut blog pribadi ini dinyatakan dibuka kembali.
 Projek besar dengan kode *Chocolate Insomnia* secara resmi dimulai. Let's
 make an OS. Let's the fun begin.
+
+# Bikin OS by Grinding
+
+Tue Oct 15 09:59:16 WIT 2013
+
+Bikin OS, bukan karena apa-apa. Cuma buat grinding. Buat Habituasi. Bikin
+pembiasaan. Pembiasaan dalam beberapa hal. Mulai dari ngeblog.
+Mendokumentasikan apa yang ditemukan. Membiasakan ngoding. Ngoding Assembly.
+Ngoding C. Dan ngoding-ngoding yang lain.
+
+Yang saya lakukan ini dimulai dari hobi. Hobi project. Bukan karena suka
+atau semacamnya. Bukan karena passion atau semacamnya. Karena hobi. Dan hobi
+itupun bukan goalnya. Hobi itu bukan alasan pula.
+
+So, there's no actual goal. There is no actual destination. Tapi bukan
+berarti aimless. Cuma gak goal-oriented.
+
+OK. saatnya grinding lagi. Grinding OS, dan grinding-grinding yang lain. :)
