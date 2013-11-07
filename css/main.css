@@ -170,7 +170,7 @@ ul.posts span {
 }
 
 #post img {
-   float: left;
+   /*float: left;*/
    margin: 1em;
 }
 
