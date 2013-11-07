@@ -1,62 +1,40 @@
 ---
 layout: post
-title: Bagaimana Menulis Kode Go
+title: Pengorganisian Kode Go
 categories: programming
 ---
 
-![Gopher - Maskot Bahasa Go](/images/gopherbw-small.png)
-
-Organisasi Kode
----------------
+<div style="float:left;">
+<img alt="Gopher - Maskot Bahasa Go" src="/images/gopherbw-small.png">
+</div>
 
 ### Workspace
 
-Kode Go harus tetap berada di dalam _workspace_. Workspace adalah hirarki
+Kode Go harus berada di dalam _workspace_. Workspace adalah hirarki
 direktori dengan tiga direktori di bagian atas sendiri, yakni:
 
 - _src_ berisi file kode Go yang terorganisir kedaalam _packages_ (satu
   package untuk tiap direktori),
 - _pkg_ berisi _package objects_, dan
-- _bin_ berisi perintah executable.
+- _bin_ berisi perintah executable/file binari untuk dieksekusi.
 
 Go tool membangun source packages dan menginstal hasil binarinya
 masing-masing ke dalam direktori _pkg_ dan _bin_.
 
-Subdirektori `src` biasanya memuat version control repositori (seperti Git
-atau Mercurial) yang melacak pengembangan dari satu atau lebih source
-packages.
+Subdirektori `src` biasanya memuat repositori dari version control
+system (seperti Git atau Mercurial) yang melacak pengembangan dari satu atau
+lebih source packages.
 
 Untuk memberi ide bagaimana suatu workspace terlihat dalam praktiknya,
 berikut contohnya:
 
 {% highlight text %}
-$GOPATH
-├── bin
-│   ├── gh
-│   ├── gotour
-│   └── hello
-├── pkg
-│   └── linux_386
-│       └── github.com
-│           └── banthar
-│               └── Go-SDL
-│                   ├── gfx.a
-│                   ├── mixer.a
-│                   ├── sdl.a
-│                   └── ttf.a
-└── src
-    └── github.com
-        └── matematikaadit
-            ├── hello
-            │   └── hello.go
-            └── newmath
-                ├── sqrt.go
-                └── sqrt_test.go
+TODO: copy dari website go
 {% endhighlight %}
 
-Workspace diatas memuat tiga repositori (goauth2, streak, dan todo) yang
-menghasilkan dua command (streak dan todo) dan dua pustaka (oauth dan
-task).
+Workspace diatas memuat dua repositori (hello dan newmath) yang menghasilkan
+tiga command (gh, gotour, dan hello) dan empat pustaka (gfx, mixer, sdl, dan
+ttf).
 
 Command dan pustaka dibangun dari jenis-jenis source packages yang berbeda.
 Kita akan mendiskusikannya kemudian.
