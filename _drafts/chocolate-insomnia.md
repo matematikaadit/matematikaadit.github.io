@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chocolate Insomnia: Sebuah Project Menulis OS dari Nol
+title: "Chocolate Insomnia: Sebuah Project Menulis OS dari Nol"
 categories: programming
 ---
 
@@ -44,7 +44,7 @@ someone will love you for what you do.
 
 Chocolate Insomnia by Yui Horie (Nekomonogatari White OP)
 
-{% hightlight txt %}
+{% highlight text %}
 Sorry
 I always cause trouble for you like this
 
@@ -60,4 +60,4 @@ I never realized it
 Is it too much to ask
 to allow the sleeping beauty
 to wait for her prince's kiss?
-{% endhightlight %}
+{% endhighlight %}
