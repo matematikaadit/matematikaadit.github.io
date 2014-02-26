@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<title>Modem Addon</title>
+<h1>Modem Addon</h1>
+<p>Modem Addon v0.1</p>
+<p>
+<a id="connect" href="#connect">Connect</a><br />
+<a id="disconnect" href="#disconnect">Disconnect</a>
+</p>
+<script>
+function createXmlElement(name, value) {
+  return "<" + name + ">" + value + "</" + name + ">";
+}
+
+function recursiveObject2Xml(name, obj) {
+  var xmlstr = "";
+  if (typeof(obj) == "string" || typeof(obj) == "number") {
+    xmlstr = createXmlElement(name, obj);
+  }
+  else if (Array.isArray(obj)) {
+    for (var i = 0; i < obj.length; i++) {
+      xmlstr += recursiveObject2Xml(name, obj[i]);
+    }
+  }
+  else if (typeof(obj) == "object") {
+      xmlstr += "<" + name + ">";
+      for (var prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+          xmlstr += recursiveObject2Xml(prop, obj[prop]);
+        }
+      }
+      xmlstr += "</" + name + ">";
+  }
+  return xmlstr;
+}
+
+// convert an object to xml string.
+// name: root tag name of XML
+// obj:  object which is to be convert to XML
+function object2xml(name, obj) {
+  var xmlstr = '<?xml version="1.0" encoding="UTF-8"?>';
+  xmlstr += recursiveObject2Xml(name, obj);
+  return xmlstr;
+}
+
+var address = "http://192.168.1.1";
+
+var requests = {
+  post: function(path, data) {
+    var target = address + path;
+    var xhr = new XMLHttpRequest();
+    xhr.open("post", target, true);
+    xhr.send(data);
+  },
+  get: function(path, data) {
+    var target = address + path;
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", target, true);
+    if (data) {
+      xhr.send(data);
+    }
+    else {
+      xhr.send();
+    }
+  }
+};
+
+// ---------- Dialup ----------
+
+function dialup(action) {
+  var dialup_xml = object2xml("request", {"Action": action });
+  requests.post("/api/dialup/dial", dialup_xml);
+}
+
+var connect_link = document.getElementById("connect");
+var disconnect_link = document.getElementById("disconnect");
+
+connect_link.onclick = function(e) {
+  e.preventDefault();
+  dialup(1);
+}
+
+disconnect_link.onclick = function(e) {
+  e.preventDefault();
+  dialup(0);
+}
+</script>
+
+
