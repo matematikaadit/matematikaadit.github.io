@@ -29,7 +29,7 @@ tadi.
 
 Di Post ini agar lebih kontekstual, berikut saya berikan suatu masalah
 yang akan kita pecahkan dengan bantuan XPath tadi. Dan sebagai bonus
-extra, saya cantumkan programnya
+extra, saya cantumkan programnya.
 
 Masalah pertama, ambil semua daftar link di section "The Latest Anime
 Episodes" yang mengarah ke halaman download di [animetake.com][animetake].
