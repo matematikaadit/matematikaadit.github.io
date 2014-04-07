@@ -3,16 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>Hitung Hari</title>
+  <style>label {font-weight: bold;}</style>
 </head>
 <body>
 <div>
-  <label for="d">tanggal:</label>
+  <label for="d">tanggal:</label><br>
   <input type="text" id="d"><br>
-  <label for="n">n:</label>
+  <label for="n">n:</label><br>
   <input type="text" value="1000" id="n"><br>
   <button id="b">hitung!</button>
 </div>
-<div id="o">hasil:</div>
+<div>
+  <b>hasil:</b><br>
+  <span id="o"></span>
+</div>
 <script>
 var days = function(n) {
   return n * 24 * 60 * 60 * 1000;
@@ -22,7 +26,7 @@ var dtoutput = function(dt) {
   var xd = dt.getDate();
   var xm = dt.getMonth()+1;
   var xy = dt.getFullYear();
-  return "hasil: " + xd + "/" + xm + "/" + xy;
+  return "" + xd + "/" + xm + "/" + xy;
 };
 
 var b = document.getElementById("b");
