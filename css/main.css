@@ -62,10 +62,9 @@ ul.posts span {
 .site {
   font-size: 115%;
   max-width: 600px;
-  margin: 10px auto;
+  margin: 0 auto;
   line-height: 1.5em;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 10px 5px;
 }
 
 .site .header {
