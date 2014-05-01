@@ -49,10 +49,6 @@ ul.posts li {
   line-height: 1.75em;
 }
 
-ul.posts span {
-  color: #000;
-}
-
 /*****************************************************************************/
 /*
 /* Site
@@ -105,7 +101,8 @@ ul.posts span {
 /*****************************************************************************/
 
 /* standard */
-#post pre {
+#post pre,
+#post code {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 5px;
@@ -113,12 +110,6 @@ ul.posts span {
 
 #post ul, #post ol {
   margin-left: 10px;
-}
-
-#post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 5px;
 }
 
 #post pre code {

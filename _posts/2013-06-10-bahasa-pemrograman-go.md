@@ -3,9 +3,7 @@ layout: post
 title: "Bahasa Pemrograman Go"
 ---
 
-![Gopher - Maskot Bahasa Go](/images/gopherbw-small.png)
-
-[Go][0] adalah bahasa pemrograman yang simpel, ringkas, dan efisien.
+[Golang][0] adalah bahasa pemrograman yang simpel, ringkas, dan efisien.
 Diciptakan oleh Rob Pike, Ken Thompson, dan Robert Griesemer. Pertama kali
 dikembangkan dan didesain di Google dan kemudian dijadikan proyek open
 source. Terkenal di kalangan programmer python dan ruby meskipun pada
