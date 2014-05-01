@@ -21,8 +21,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
+h1 { margin-bottom: 10px; }
+p { margin: 10px 0; }
 
 table {
   font-size: inherit;
@@ -42,7 +42,7 @@ table {
 /*****************************************************************************/
 ul.posts {
   list-style-type: none;
-  margin-bottom: 2em;
+  margin-bottom: 10px;
 }
 
 ul.posts li {
@@ -61,8 +61,8 @@ ul.posts span {
 
 .site {
   font-size: 115%;
-  max-width: 42em;
-  margin: 1em auto;
+  max-width: 600px;
+  margin: 10px auto;
   line-height: 1.5em;
   padding-left: 10px;
   padding-right: 10px;
@@ -70,7 +70,7 @@ ul.posts span {
 
 .site .header {
   border-bottom: 1px solid #000;
-  margin-bottom: 2em;
+  margin-bottom: 10px;
 }
 
 .site .header a {
@@ -90,23 +90,13 @@ ul.posts span {
   font-size: 80%;
   color: #000;
   border-top: 1px solid #000;
-  margin-top: 2em;
+  margin-top: 10px;
   overflow: hidden;
 }
 
 .site .footer .contact {
   float: left;
-  margin-right: 3em;
-}
-
-.site .footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.site .footer .rss img {
-  border: 0;
+  margin-right: 20px;
 }
 
 /*****************************************************************************/
