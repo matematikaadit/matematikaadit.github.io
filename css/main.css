@@ -108,17 +108,17 @@ ul.posts span {
 #post pre {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .4em;
+  padding: 0 5px;
 }
 
 #post ul, #post ol {
-  margin-left: 1.35em;
+  margin-left: 10px;
 }
 
 #post code {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .2em;
+  padding: 0 5px;
 }
 
 #post pre code {
@@ -137,5 +137,5 @@ ul.posts span {
 }
 
 #post img {
-   margin: 1em;
+   margin: 10px;
 }
