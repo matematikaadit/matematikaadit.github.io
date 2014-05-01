@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Menulis Dimanapun"
-categories: menulis
 ---
 
 Kalo dibayangin, bikin tulisan (artikel, buku, resensi, ngeblog, dsb) lewat

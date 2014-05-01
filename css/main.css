@@ -16,7 +16,6 @@ body {
   background-color: #FFF;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
-  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,8 +55,6 @@ ul.posts li {
 
 ul.posts span {
   color: #000;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
 }
 
 /*****************************************************************************/
@@ -68,14 +65,13 @@ ul.posts span {
 
 .site {
   font-size: 115%;
-  text-align: justify;
   width: 42em;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
 
 .site .header {
-  border-bottom: 4px solid #0a0;
+  border-bottom: 1px solid #0a0;
   margin-bottom: 2em;
 }
 
@@ -107,7 +103,7 @@ ul.posts span {
 .site .footer {
   font-size: 80%;
   color: #000;
-  border-top: 4px solid #0a0;
+  border-top: 1px solid #0a0;
   margin-top: 2em;
   overflow: hidden;
 }
@@ -170,7 +166,5 @@ ul.posts span {
 }
 
 #post img {
-   /*float: left;*/
    margin: 1em;
 }
-

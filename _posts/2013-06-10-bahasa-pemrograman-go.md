@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Bahasa Pemrograman Go"
-categories: programming
 ---
 
 ![Gopher - Maskot Bahasa Go](/images/gopherbw-small.png)
@@ -56,7 +55,7 @@ func main() {
 Di terminal jalankan perintah berikut:
 
 {% highlight console %}
-$ go run halo.go 
+$ go run halo.go
 halo, dunia
 {% endhighlight %}
 

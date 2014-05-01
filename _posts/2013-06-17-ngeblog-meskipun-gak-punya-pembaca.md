@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Kalian Harus Ngeblog Meskipun Gak Punya Pembaca"
-categories: menulis
 ---
 
 ... Ahem ... Tapi kalian gak harus ngeblog. Yang saya tulis di atas saya
