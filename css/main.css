@@ -24,10 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #0a0; }
-a:hover   { color: #000; }
-a:visited { color: #040; }
-
 table {
   font-size: inherit;
   font: 100%;
@@ -65,13 +61,15 @@ ul.posts span {
 
 .site {
   font-size: 115%;
-  width: 42em;
+  max-width: 42em;
   margin: 3em auto 2em;
   line-height: 1.5em;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .site .header {
-  border-bottom: 1px solid #0a0;
+  border-bottom: 1px solid #000;
   margin-bottom: 2em;
 }
 
@@ -84,18 +82,6 @@ ul.posts span {
   display: inline-block;
 }
 
-.site .header h1.title a {
-  color: #0a0;
-}
-
-.site .header h1.title a:hover {
-  color: #000;
-}
-
-.site .header a.extra:hover {
-  color: #000;
-}
-
 .site .meta {
   color: #444;
 }
@@ -103,7 +89,7 @@ ul.posts span {
 .site .footer {
   font-size: 80%;
   color: #000;
-  border-top: 1px solid #0a0;
+  border-top: 1px solid #000;
   margin-top: 2em;
   overflow: hidden;
 }
@@ -111,10 +97,6 @@ ul.posts span {
 .site .footer .contact {
   float: left;
   margin-right: 3em;
-}
-
-.site .footer .contact a {
-  color: #0a0;
 }
 
 .site .footer .rss {
