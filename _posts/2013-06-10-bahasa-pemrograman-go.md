@@ -13,10 +13,10 @@ konkurensinya, go banyak digunakan untuk *back-end* pada server.
 <h2 class="clear">Memulai Go di Ubuntu</h2>
 
 Berikut instruksi untuk memulai Go di Ubuntu. Diawali dari download
-binarynya sampai menjalankan program "hello world".
+binarinya sampai menjalankan program "hello world".
 
 Download Go di [halaman download proyek Go][1].
-Pilih binary untuk linux dan sesuaikan dengan arsitektur prosesor
+Pilih binari untuk linux dan sesuaikan dengan arsitektur prosesor
 komputer kalian (x86 32-bit atau x86 64-bit).
 
 Ekstrak hasil download tadi ke `/usr/local`. Misal file yang yang
