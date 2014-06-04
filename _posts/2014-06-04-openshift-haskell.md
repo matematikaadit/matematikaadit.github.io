@@ -13,7 +13,7 @@ package yang dipakai hanya
 
 ## Membuat Aplikasi Haskell
 
-Ketikkan perintah berikut, ganti `nama_aplikasi` dengan nama yang kalian inginkana.
+Ketikkan perintah berikut, ganti `nama_aplikasi` dengan nama yang kalian inginkan.
 
 {% highlight console %}
 $ rhc app create nama_aplikasi \
