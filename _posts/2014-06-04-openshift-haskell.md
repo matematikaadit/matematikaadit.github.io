@@ -15,24 +15,25 @@ package yang dipakai hanya
 
 Ketikkan perintah berikut, ganti `nama_aplikasi` dengan nama yang kalian inginkana.
 
-```
-rhc app create nama_aplikasi http://www.accursoft.com/cartridges/network.yml -s
-```
+{% highlight console %}
+$ rhc app create nama_aplikasi \
+http://www.accursoft.com/cartridges/network.yml -s
+{% endhighlight %}
 
 Tunggu hingga aplikasi kalian selesai terinstall. Akan ada folder baru
 sesuai dengan `nama_aplikasi` yang kalian berikan di perintah diatas tadi.
 Masuk ke folder tersebut:
 
-```
-cd nama_aplikasi
-```
+{% highlight console %}
+$ cd nama_aplikasi
+{% endhighlight %}
 
 Untuk mengetahui nama domain dimana aplikasi kalian terinstall gunakan
 perintah:
 
-```
-rhc app show
-```
+{% highlight console %}
+$ rhc app show
+{% endhighlight %}
 
 Contoh aplikasi milik saya hasil dari mengetikkan perintah diatas bisa
 kalian lihat di [ircbot-matematikaadit.rhcloud.com][ircbot].
