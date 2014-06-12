@@ -13,19 +13,19 @@ package yang dipakai hanya
 
 ## Membuat Aplikasi Haskell
 
-Ketikkan perintah berikut, ganti `nama_aplikasi` dengan nama yang kalian inginkan.
+Ketikkan perintah berikut, ganti `ircbot` dengan nama yang kalian inginkan.
 
 {% highlight console %}
-$ rhc app create nama_aplikasi \
+$ rhc app create ircbot \
 http://www.accursoft.com/cartridges/network.yml -s
 {% endhighlight %}
 
 Tunggu hingga aplikasi kalian selesai terinstall. Akan ada folder baru
-sesuai dengan `nama_aplikasi` yang kalian berikan di perintah diatas tadi.
+sesuai dengan `ircbot` yang kalian berikan di perintah diatas tadi.
 Masuk ke folder tersebut:
 
 {% highlight console %}
-$ cd nama_aplikasi
+$ cd ircbot
 {% endhighlight %}
 
 Untuk mengetahui nama domain dimana aplikasi kalian terinstall gunakan
@@ -36,7 +36,7 @@ $ rhc app show
 {% endhighlight %}
 
 Contoh aplikasi milik saya hasil dari mengetikkan perintah diatas bisa
-kalian lihat di [ircbot-matematikaadit.rhcloud.com][ircbot].
+kalian lihat di [ircbot][ircbot].
 
 Sekarang kalian bisa edit file di dalam folder ini, setelahnya lakukan `git
 push` untuk mengupdate aplikasi kalian.
