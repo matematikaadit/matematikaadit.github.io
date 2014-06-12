@@ -49,6 +49,10 @@ ul.posts li {
   line-height: 1.75em;
 }
 
+ul.posts span {
+  font-family: Monaco, "Courier New", monospace;
+}
+
 /*****************************************************************************/
 /*
 /* Site
