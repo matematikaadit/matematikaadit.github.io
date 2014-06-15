@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vim dan Haskell"
+title: "Vim dan Haskell - haskellmode"
 ---
 
 Persiapkan editor vim kalian menghadapi pertarungan di medan tempur bersama
