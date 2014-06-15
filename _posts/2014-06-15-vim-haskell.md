@@ -40,7 +40,8 @@ fungsi `GHC_BrowseAll()` dan `GHC_ShowType(1)`. Fungsi ini bukan didapat
 dari **ghc-mod** seperti apa yang disebutkan oleh Stephen Diehl. Berikut
 map yang bisa kalian tambahkan untuk mempermudah menggunakan dua fungsi ini.
 (Catatan: `GHC_ShowType(1)` juga bisa dijalankan dengan perintah `_T`,
-kalau fungsi `GHC_BrowseAll()` entah lewat perintah apa.)
+sedangkan fungsi `GHC_BrowseAll()` bisa dijalankan dengan perintah
+`:GHCReload`.)
 
     " Reload proses GHC
     map <silent> tu :call GHC_BrowseAll()
@@ -49,7 +50,9 @@ kalau fungsi `GHC_BrowseAll()` entah lewat perintah apa.)
 
 Dengan dua map diatas, kalian bisa mengetikkan perintah `tu` untuk memuat
 ulang proses GHC dan perintah `tw` untuk menambahkan type signature diatas
-deklarasi fungsi.
+deklarasi fungsi. Jika ingin melihat type signature tanpa menambahkannya
+diatas deklarasi fungsi, gunakan perintah `_t`. Lihat selengkapnya
+di `:help haskellmode`.
 
 Sekian bagian pertama postingan ini, plugin yang lain akan dibahas di
 postingan berikut.
