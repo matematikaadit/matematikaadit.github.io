@@ -42,10 +42,14 @@ map yang bisa kalian tambahkan untuk mempermudah menggunakan dua fungsi ini.
 (Catatan: `GHC_ShowType(1)` juga bisa dijalankan dengan perintah `_T`,
 kalau fungsi `GHC_BrowseAll()` entah lewat perintah apa.)
 
-    " Browsing Type
+    " Reload proses GHC
     map <silent> tu :call GHC_BrowseAll()
     " Nambahkan Tipe diatas deklarasi fungsi
     map <silent> tw :call GHC_ShowType(1)
+
+Dengan dua map diatas, kalian bisa mengetikkan perintah `tu` untuk memuat
+ulang proses GHC dan perintah `tw` untuk menambahkan type signature diatas
+deklarasi fungsi.
 
 Sekian bagian pertama postingan ini, plugin yang lain akan dibahas di
 postingan berikut.
