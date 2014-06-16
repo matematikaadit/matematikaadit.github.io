@@ -4,8 +4,8 @@ title: "Yorge Course - Bab 1 - Haskell Basic"
 ---
 
 Postingan ini adalah bagian dari proyek translasi [Yorgey Course][yorgey] ke
-dalam bahasa Indonesia. Bagian pertama ini memuat sebagian dari bab 1 dari
-Yorgey Course tersebut. Kelanjutannya akan dimuat di postingan berikutnya.
+dalam bahasa Indonesia. Bagian pertama ini memuat sebagian dari
+[Bab 1][ch1]. Kelanjutannya akan dimuat di postingan berikutnya.
 
 ## Apa itu Haskell?
 
@@ -71,7 +71,7 @@ Beberapa konsekuensinya antara lain:
 * Sangat mungkin mendefinisikan dan bekerja dengan *struktur data tak
   hingga*.
 * Menyediakan lebih banyak model pemrograman komposisional (lihat *wholemeal
-  programming* di bawah [red: di postingan berikut]).
+  programming* di bawah, RED: di postingan berikut).
 * Salah satu aspek negatif utamanya adalah pertimbangan terhadap penggunaan
   waktu dan *space* menjadi lebih rumit.
 
@@ -82,3 +82,4 @@ periksa pada *waktu kompilasi*. Program dengan kesalahan tipe tidak akan
 di-*compile*, apalagi dijalankan.
 
 [yorgey]: http://www.seas.upenn.edu/~cis194/lectures.html
+[ch1]: http://www.seas.upenn.edu/~cis194/lectures/01-intro.html
