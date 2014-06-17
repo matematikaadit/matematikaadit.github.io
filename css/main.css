@@ -136,3 +136,14 @@ ul.posts span {
 #post img {
    margin: 10px;
 }
+
+#post hr {
+   margin: 10px auto;
+   border: 0;
+   height: 1px;
+   background-color: black;
+}
+
+#post blockquote {
+   padding: 0 35px;
+}
