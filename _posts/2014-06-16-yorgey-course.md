@@ -28,8 +28,8 @@ Tidak ada pengertian yang presisi dan diterima untuk istilah "fungsional".
 Tapi ketika kita mengatakan bahwa Haskell adalah bahasa pemrograman
 fungsional, kita biasanya punya dua hal di kepala kita:
 
-* Fungsi-nya *first-class*, yakni fungsi adalah *value* yang bisa digunakan
-  layaknya *value-value* yang lain.
+* Fungsi-nya *first-class*, yakni fungsi adalah nilai yang bisa digunakan
+  layaknya nilai-nilai yang lain.
 * Arti dari program Haskell berpusat disekitar *mengevaluasi ekspresi*
   ketimbang *mengeksekusi instruksi*.
 
