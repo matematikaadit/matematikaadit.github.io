@@ -3,10 +3,10 @@ layout: post
 title: "Yorge Course - Bab 1 - Haskell Basic"
 ---
 
-Postingan ini adalah bagian dari proyek translasi [Yorgey Course][yorgey] ke
+Postingan ini adalah bagian dari proyek penerjemahan [Yorgey Course][yorgey] ke
 dalam bahasa Indonesia. Bagian pertama ini memuat sebagian dari
 [Bab 1][ch1]. Kelanjutannya akan dimuat di postingan berikutnya.
-Translasi dimulai dari paragraph dibawah ini.
+Terjemahan dimulai dari paragraph dibawah ini.
 
 ------------------------------
 
