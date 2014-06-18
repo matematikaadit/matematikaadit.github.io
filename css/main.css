@@ -19,7 +19,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 100%;
+  margin: 10px 0;
+}
 
 h1 { margin-bottom: 10px; }
 p { margin: 10px 0; }
