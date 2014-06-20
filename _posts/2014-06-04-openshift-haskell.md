@@ -5,17 +5,17 @@ title: "Bot IRC - Haskell di OpenShift"
 
 Postingan ini adalah bagian dari tutorial membuat IRC Bot kalian sendiri
 dengan bahasa pemrograman Haskell. Tapi topik yang akan dibahas sekarang
-tidak spesifik hanya untuk keperluan tersebut. Kalian bisa terapkah tuorial
+tidak spesifik hanya untuk keperluan tersebut. Kalian bisa terapkah tutorial
 singkat dibawah untuk membuat aplikasi apa saja yang nantinya akan kalian
 jalankan di OpenShift.
 
 Kalian yang membaca post ini saya asumsikan sudah mengenal
 [openshift][openshift] dan [Haskell][haskell]. Pastikan kalian sudah install
-`rhc` (`gem install rhc` - aka OpenShift Client Tools) dan melakukan `rhc
+`rhc` (`gem install rhc` aka OpenShift Client Tools) dan melakukan `rhc
 setup`. Keluaran yang diharapkan dari tutorial singkat ini berupa website di
 OpenShift dengan backend Haskell (untuk keperluan tutorial singkat ini,
 package yang dipakai hanya
-[network]()). 
+[network][network]). 
 
 ## Membuat Aplikasi Haskell
 
@@ -27,7 +27,7 @@ http://www.accursoft.com/cartridges/network.yml -s
 {% endhighlight %}
 
 Tunggu hingga aplikasi kalian selesai terinstall. Akan ada folder baru
-sesuai dengan `ircbot` yang kalian berikan di perintah diatas tadi.
+dengan nama `ircbot` atau nama yang kalian berikan di perintah diatas tadi.
 Masuk ke folder tersebut:
 
 {% highlight console %}
@@ -41,8 +41,7 @@ perintah:
 $ rhc app show
 {% endhighlight %}
 
-Contoh aplikasi milik saya hasil dari mengetikkan perintah diatas bisa
-kalian lihat di [ircbot][ircbot].
+Contohnya aplikasinya bisa kalian lihat di [ircbot-matematikaadit][ircbot].
 
 Sekarang kalian bisa edit file di dalam folder ini, setelahnya lakukan `git
 push` untuk mengupdate aplikasi kalian.
