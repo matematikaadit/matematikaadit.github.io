@@ -2,16 +2,8 @@
 Blog Writer: Adit Cahya Ramadhan
 Contact: adit [at] kasinoda [dot] org
 Twitter: @aditcr8
-From: Bangil, Indonesia
-
-/* THANKS */
-Jekyll and This Site's Original Theme Creator: Tom Preston-Werner
-Twitter: @mojombo
-Site: tom.preston-werner.com
-From: San Fransisco
+From: Malang, Indonesia
 
 /* SITE */
-Last update: 2013/07/02
 Standards: HTML5, CSS3
-Components: Pygments css theme
 Software: Jekyll, Git
