@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Instalasi Hdevtools untuk GHC 7.8.2"
+tags: "haskell"
 ---
 
 Saat tulisan ini ditulis, paket [hdevtools][hdevtools] yang diunggah di

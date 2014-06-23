@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Vim dan Haskell - haskellmode"
+tags: "haskell"
 ---
 
 Persiapkan editor vim kalian menghadapi pertarungan di medan tempur bersama

@@ -1,6 +1,7 @@
 ---
 layout: "post"
 title: ". versus $"
+tags: "haskell"
 ---
 
 Pak Dengklek punya kode Haskell seperti ini:

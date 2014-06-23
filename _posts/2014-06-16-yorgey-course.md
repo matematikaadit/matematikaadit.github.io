@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Yorge Course - Bab 1 - Haskell Basic"
+tags: "haskell"
 ---
 
 Postingan ini adalah bagian dari proyek penerjemahan [Yorgey Course][yorgey]

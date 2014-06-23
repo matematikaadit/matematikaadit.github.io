@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Bot IRC - Haskell di OpenShift"
+tags: "haskell"
 ---
 
 Postingan ini adalah bagian dari tutorial membuat IRC Bot kalian sendiri
