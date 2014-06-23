@@ -4,7 +4,7 @@ title: "Reading List Minggu ini"
 tags: "haskell"
 ---
 
-Yang sedang dibaca, sudah dibaca, dan akan dibaca. Masih bakal nambah selama
+Yang sedang dibaca, sudah dibaca, dan akan dibaca. Masih bakal nambah
 sepertinya.
 
 # Talen en Compilers' Course Material

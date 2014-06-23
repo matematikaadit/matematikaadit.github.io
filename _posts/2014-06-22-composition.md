@@ -24,17 +24,26 @@ dan menyarankan Pak Dengklek untuk menggantinya jadi seperti ini.
 Nah, loh. Emang apa bedanya, tanya Pak Dengklek. Cuman ganti simbol `$`
 dengan `.` aja kan.
 
-Oooh... jangan salah. Menggunakan `(.)` a.k.a. *composition* menunjukkan
-bahwa program kalian lebih *composable* ketimbang menggunakan operator
-`($)`. Kan salah satu keunggulan pemrograman fungsional adalah kalian bisa
-dengan mudah dan gratis mengkomposisikan fungsi-fungsi yang kalian
-definisikan. Kalo bisa di *compose*, kenapa tidak?
+Oooh... jangan salah. Komposisi fungsi a.k.a `(.)` itu lebih ...
+*composable*. Iyaaa. beneran. *Composition style* nunjukkin bahwa fungsi
+kalian adalah unit komposisi yang bisa kalain *mix and match* untuk
+mendapatkan apa yang kalian inginkan. Namanya juga functional programming.
 
-Itu sebabnya di Haskell lebih banyak yang suka versi kode yang disaranin Pak
-Ganesh tadi. Bahkan, beberapa orang memilih untuk bikin kode tersebut jadi
-*pointless* seperti ini:
+Di sisi lain, `($)` itu operator untuk aplikasi fungsi dengan operator
+*precedence* paling rendah. Itu sebabnya bisa dipakai juga ngilangin tanda
+kurung dari kode yang banyak kurungnya. Kayak spasi yang mewujudkan diri.
+Namun terkadang simbol dollar ini justru menghalangi jalan kita para
+komposisionist :). Itu sebabnya di Haskell lebih banyak yang suka versi kode
+yang disaranin Pak Ganesh tadi. Kata mereka "Gue gak butuh banyak dollar
+buat kode ini, enyah kau sana!!!". Emang agak lebay sih...
+
+Sebagai bonus, kalian juga bisa hapus sepenuhnya simbol dollar tersebut dari
+fungsi tadi pake *pointless style* berikut:
 
     numRev :: Int -> Int
     numRev = read . reverse . show
 
-Yang tentunya gak bisa dilakukan kalau pake `($)`.
+Lebih indah kan (RED: pendapat pribadi).
+
+*Disadur dari pembicaraan di channel #haskell-beginners di freenode*
+
