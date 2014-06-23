@@ -7,7 +7,7 @@ tags: "haskell"
 Yang sedang dibaca, sudah dibaca, dan akan dibaca. Masih bakal nambah
 sepertinya.
 
-# Talen en Compilers' Course Material
+## Talen en Compilers' Course Material
 
 [Talen en Compilers (Language and Compilers)][tc]
 
@@ -16,7 +16,7 @@ yang pengen belajar lebih dalam seputar *parser combinator*. Dapat linknya
 dari komen di postingan reddit ["try a <|> b" considered harmful][reddit].
 Dan kebetulan banget sedang pengen belajar seputar *parsing* di Haskell.
 
-# Operational Monad
+## Operational Monad
 
 [Operational Monad, not Another Monad Introduction, right?][opmon]
 
@@ -32,7 +32,7 @@ Judulnya Operational Monad aja sih. Dapat linknya dari [halaman paket
     <matematikaadit> > http://apfelmus.nfshost.com/articles/operational-monad.html
     <KampungHijau> cuma operational pake gadt; free monad ngga
 
-# Duality for Haskellers
+## Duality for Haskellers
 
 [Duality for Haskellers][dual]
 
@@ -41,14 +41,14 @@ kanal #haskell-id. Memberikan pencerahan seputar konsep *duality* dari teori
 kategori. Disertai diagram-diagram yang memperjelas penjelasannya. Jadinya
 pengen memperdalam belajar teori kategori :)
 
-# Free Monad
+## Free Monad
 
 [Why Free Monad Matter][freemonad]
 
 Juga dikenal sebagai "*You Could Have Invented Free Monad*", oleh Gabriel
 Gonzalez. Penjelasan tentang *Free Monad*. Sip banget pokoknya :)
 
-# Bonus Game Geometri
+## Bonus Game Geometri
 
 [Ancient Greek Geometry][geoa] dan [Euclid Game][egeo].
 
