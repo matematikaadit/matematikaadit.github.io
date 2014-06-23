@@ -48,6 +48,14 @@ pengen memperdalam belajar teori kategori :)
 Juga dikenal sebagai "*You Could Have Invented Free Monad*", oleh Gabriel
 Gonzalez. Penjelasan tentang *Free Monad*. Sip banget pokoknya :)
 
+## Catsters Guide
+
+[Catsters Guide][cats]
+
+List dari kumpulan video tentang teori kategori. Cocok buat kamu yang pengen
+meng-*solid*-kan fondasi teori kategori. Dapat linknya dari [postingan di
+/r/haskell][catsred].
+
 ## Bonus Game Geometri
 
 [Ancient Greek Geometry][geoa] dan [Euclid Game][egeo].
@@ -61,3 +69,5 @@ Gonzalez. Penjelasan tentang *Free Monad*. Sip banget pokoknya :)
 [geoa]: http://www.sciencevsmagic.net/geo/
 [egeo]: http://euclidthegame.org/
 [freemonad]: http://www.haskellforall.com/2012/06/you-could-have-invented-free-monads.html
+[cats]: http://byorgey.wordpress.com/catsters-guide-2/#introduction
+[catsred]: http://redd.it/28vbct
