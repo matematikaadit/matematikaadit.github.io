@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Reading List Minggu ini"
+title: "Reading List Minggu Ini"
 tags: "haskell"
 ---
 
