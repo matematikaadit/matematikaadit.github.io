@@ -64,9 +64,14 @@ adalah `kuliah`.
       unwords []  = ""
       unwords xs  = foldr (\w s -> w ++ " " ++ s) (last xs) (init xs)
 
-Problem selanjutnya di *practice* ini akan dibahas di lain kesempatan.
+Problem selanjutnya di *practice* ini akan dibahas di postingan berikutnya.
+
+----
+
+Kelanjutan catatan ini ada [Languages and Compilers II][nextp].
 
 
 [lnotes]: http://www.cs.uu.nl/wiki/TC/CourseMaterials#Lecture_Notes
 [lslides]: http://www.cs.uu.nl/wiki/TC/CourseMaterials#Slides
 [lpracticals]: http://www.cs.uu.nl/wiki/TC/CourseAssignments#Practicals
+[nextp]: {% post_url 2014-06-26-lang-compiler2 %}

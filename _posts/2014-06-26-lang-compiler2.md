@@ -4,7 +4,9 @@ title: "Languages and Compilers II"
 tags: "haskell"
 ---
 
-Lanjutan dari [catatan yang kemarin][tc1].
+Lanjutan dari [Languages and Compilers][tc1].
+
+----
 
 Notasi dari **sequence** di matematika yang kita definisikan kemarin mirip
 dengan notasi **list** di Haskell. Bedanya, notasi list di haskell lebih
