@@ -78,9 +78,7 @@ terminalnya adalah {a, b, c}.
       words = uncurry combine . foldr accumulator ([],"")
           where
           accumulator c (a, w)
-              | isSpace c = case w of
-                              "" -> (a,  "")
-                              _  -> (w:a,"")
+              | isSpace c = (combine a w, "")
               | otherwise = (a,c:w)
           combine a ""  = a
           combine a w   = w:a
