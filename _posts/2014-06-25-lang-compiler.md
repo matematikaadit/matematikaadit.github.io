@@ -10,6 +10,8 @@ juga [*slides*-nya][lslides] yang merupakan versi ramping dari *lecture
 notes* tadi. Selain itu juga saya sertakan pembahasan masalah **P-0** yang
 diberikan di [Course Assigments Practicals][lpracticals]
 
+------
+
 ## Rangkuman
 
 Definisi-definisi.
@@ -40,6 +42,8 @@ Contoh:
 Himpunan `{ kuliah, praktik, latihan, ujian }` adalah bahasa diatas alfabet
 `{ a,h,i,j,k,l,n,p,r,t,u }`, salah satu kalimat/kata di bahasa tersebut
 adalah `kuliah`.
+
+----
 
 ## Practices
 
