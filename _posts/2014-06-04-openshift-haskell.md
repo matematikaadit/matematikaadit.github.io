@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bot IRC - Haskell di OpenShift"
+title: "Haskell di OpenShift"
 tags: "haskell"
 ---
 
