@@ -143,7 +143,7 @@ ke OpenShift untuk ngelihat hasilnya.
 ## Catatan
 
 Akan ada folder **dist** yang isinya build artifact hasil dari cabal run
-diatas. Kalian bisa tambahkan folder ini ke .gitignore kalian:
+diatas. Biar gak masuk ke repo, daftar folder tersebut di **.gitignore**
 
     .cabal-sandbox
     cabal.sandbox.config
