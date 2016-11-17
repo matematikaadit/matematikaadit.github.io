@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rustdoc for Syntax Highlighting</title>
+<link rel="stylesheet" type="text/css" href="/static/normalize.css">
+<link rel="stylesheet" type="text/css" href="/static/main.css">
+<link rel="stylesheet" type="text/css" href="/static/rust.css">
+</head>
+<body>
+<nav class="site-header">
+    <h1><a href="/"><code class="site-logo">[ ]</code> matematikaadit</a></h1>
+</nav>
+<section class="content">
+<header class="post-header">
+    <h1>Rustdoc for Syntax Highlighting</h1>
+    <p class="meta"><time datetime="2016-11-16T05:57:31.757Z">Nov 16, 2016</time></p>
+</header>
+
+<p>Before starting, you'll need:</p>
+<ol>
+    <li><a href="https://rustup.rs">rustup</a></li>
+    <li>rust nightly installed via rustup</li>
+</ol>
+
+<!-- bash
+    $ rustup run nightly rustc -V
+-->
+
+<p>If anything fails, prefer <code>rustc 1.14.0-nightly (cae6ab1c4 2016-11-05)</code>.</p>
+
+<p>So, here how we do it. First, we need to write our syntax highlighter. It
+will take rust code from stdin and output the rendered html to stdout. The code
+below will do this task. Save it as <a href="highlight.rs"><code>highlight.rs</code></a>.</p>
+
+<pre class='rust '><span class='comment'>// highlight.rs</span>
+<span class='attribute'>#<span class='op'>!</span>[<span class='ident'>feature</span>(<span class='ident'>rustdoc</span>)]</span>
+
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>rustdoc</span>;
+
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::{<span class='self'>self</span>, <span class='ident'>Read</span>};
+<span class='kw'>use</span> <span class='ident'>rustdoc</span>::<span class='ident'>html</span>::<span class='ident'>highlight</span>::<span class='ident'>render_with_highlighting</span>;
+
+<span class='kw'>fn</span> <span class='ident'>main</span>() {
+    <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>buf</span> <span class='op'>=</span> <span class='ident'>String</span>::<span class='ident'>new</span>();
+    <span class='kw'>let</span> <span class='ident'>stdin</span> <span class='op'>=</span> <span class='ident'>io</span>::<span class='ident'>stdin</span>();
+    <span class='ident'>stdin</span>.<span class='ident'>lock</span>().<span class='ident'>read_to_string</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>buf</span>).<span class='ident'>unwrap</span>();
+    <span class='kw'>let</span> <span class='ident'>output</span> <span class='op'>=</span> <span class='ident'>render_with_highlighting</span>(<span class='kw-2'>&amp;</span><span class='ident'>buf</span>, <span class='prelude-val'>None</span>, <span class='prelude-val'>None</span>, <span class='prelude-val'>None</span>);
+    <span class='macro'>print</span><span class='macro'>!</span>(<span class='string'>&quot;{}&quot;</span>, <span class='ident'>output</span>);
+}
+</pre>
+
+Compile it using:
+
+<pre>$ rustup run nightly rustc highlight.rs</pre>
+
+To run the binary, you need this hack:
+
+<pre>$ LD_LIBRARY_PATH="$(rustup run nightly rustc --print sysroot)/lib" \
+./highlight &lt; mycode.rs</pre>
+
+<p>You can already transform any rust code to a rendered html output. But to
+make it colorful, you need the css from librustdoc. The easiest way
+is by grabbing it from any rust project documentation.</p>
+
+<p>Below some rules that relevant, cherry-picked from librustdoc repository.</p>
+
+<!-- bash
+    $ wget https://raw.githubusercontent.com/rust-lang/rust/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/static/{rustdoc,styles/main}.css
+    $ sed -n -e '/pre[^}]*$/,/}/p;/pre.*{.*}/p' rustdoc.css main.css
+    $ # delete unneeded rules
+-->
+<pre>code, pre {
+    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "DejaVu Sans Mono", Inconsolata, monospace;
+    white-space: pre-wrap;
+}
+pre {
+    padding: 14px;
+}
+pre.rust .kw { color: #8959A8; }
+pre.rust .kw-2, pre.rust .prelude-ty { color: #4271AE; }
+pre.rust .number, pre.rust .string { color: #718C00; }
+pre.rust .self, pre.rust .bool-val, pre.rust .prelude-val,
+pre.rust .attribute, pre.rust .attribute .ident { color: #C82829; }
+pre.rust .attribute, pre.rust .attribute .ident { color: #C82829; }
+pre.rust .macro, pre.rust .macro-nonterminal { color: #3E999F; }
+pre.rust .lifetime { color: #B76514; }
+pre.rust .question-mark {
+    color: #ff9011;
+    font-weight: bold;
+}
+pre.rust { position: relative; }
+pre {
+    background-color: #F5F5F5;
+}
+pre.rust .comment { color: #8E908C; }
+pre.rust .doccomment { color: #4D4D4C; }
+</pre>
+<!-- extra font -->
+<!-- bash
+    $ wget https://raw.githubusercontent.com/rust-lang/rust/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/static/SourceCodePro-{LICENSE.txt,Regular.woff,Semibold.woff}
+    $ wget https://raw.githubusercontent.com/rust-lang/rust/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/static/SourceSerifPro-{LICENSE.txt,Regular.woff,Bold.woff}
+    $ wget https://raw.githubusercontent.com/rust-lang/rust/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/static/Heuristica-{LICENSE.txt,Italic.woff}
+-->
+<p>Now, you can put those css alongside with your blog's css. The rust code in
+this post is an example of it in action.</p>
+
+<h2>Reference:</h2>
+<ul>
+    <li><a href="https://github.com/rust-lang/rust/tree/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc">librustdoc crate</a></li>
+    <li><a href="https://github.com/rust-lang/rust/blob/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/highlight.rs">the highlighting functionality in librustdoc</a></li>
+    <li><a href="https://github.com/rust-lang/rust/tree/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/static">librustdoc's static content</a></li>
+</ul>
+</section>
+<nav class="footer">
+    <p class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/static/cc-by-4.0-80x15.png" /></a>
+<br>
+Except where otherwise noted, content on this blog is licensed under a
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</nav>
+<nav id="load-timing" class="meta"></nav>
+
+<script>
+function reportLoadTiming() {
+    var p = document.getElementById("load-timing");
+    var timing = window.performance.timing;
+    var loadTime = timing.domContentLoadedEventEnd - timing.navigationStart;
+    p.innerHTML = "(page load time: " + loadTime + " ms)"
+}
+window.addEventListener("load", reportLoadTiming, false);
+</script>
+
+</body>
+</html>

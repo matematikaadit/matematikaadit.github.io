@@ -1,0 +1,3 @@
+- How language designed for competitive programming will look like?
+- Sorting in pascal
+- Playing with canvas

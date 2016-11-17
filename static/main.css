@@ -1,0 +1,154 @@
+/* see SourceCodePro-LICENSE.txt for the source code pro license. */
+@font-face {
+    font-family: 'source code pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('source code pro'), url("sourcecodepro-regular.woff") format('woff');
+}
+@font-face {
+    font-family: 'source code pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Code Pro Semibold'), url("SourceCodePro-Semibold.woff") format('woff');
+}
+
+/* See SourceSerifPro-LICENSE.txt for the Source Serif Pro license and
+ * Heuristica-LICENSE.txt for the Heuristica license. */
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Serif Pro'), url("SourceSerifPro-regular.woff") format('woff');
+}
+@font-face {
+    font-family: 'source serif pro';
+    font-style: italic;
+    font-weight: 400;
+    src: url("heuristica-italic.woff") format('woff');
+}
+@font-face {
+    font-family: 'source serif pro';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Source Serif Pro Bold'), url("SourceSerifPro-Bold.woff") format('woff');
+}
+
+/* General structure and fonts */
+
+body {
+    font: 16px/1.4 "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
+    margin: 0;
+    position: relative;
+    padding: 10px 15px 20px 15px;
+    background-color: white;
+    color: black;
+
+    -webkit-font-feature-settings: "kern", "liga";
+    -moz-font-feature-settings: "kern", "liga";
+    font-feature-settings: "kern", "liga";
+}
+
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.4em;
+}
+h3 {
+    font-size: 1.3em;
+}
+
+ol, ul {
+    padding-left: 25px;
+}
+ul ul, ol ul, ul ol, ol ol {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0 0 .6em 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content, nav {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* table related */
+
+.content table {
+    border-spacing: 0 5px;
+    border-collapse: separate;
+}
+.content td { vertical-align: top; }
+.content td:first-child { padding-right: 20px; }
+.content td p:first-child { margin-top: 0; }
+.content td h1, .content td h2 { margin-left: 0; font-size: 1.1em; }
+
+.site-header, .content, .footer {
+    border-bottom: 1px dashed #D5D5D5;
+}
+
+/* post header */
+
+.post-header {
+    margin-bottom: 30px;
+}
+.post-header h1 {
+    margin-bottom: 0px;
+}
+.meta {
+    font-size: 14px;
+    color: gray;
+}
+
+/* site header */
+
+.site-header {
+    margin-top: 0px;
+    position: relative;
+}
+.site-header a {
+    color: black;
+}
+.site-header img {
+    vertical-align: middle;
+    width: 60px;
+}
+.site-logo {
+    color: #EF7623;
+}
+
+/* footer */
+
+.license {
+    padding: 20px;
+}
+.license, #load-timing {
+    text-align: center;
+    margin: 0 auto;
+}
+#load-timing {
+    margin-top: 20px;
+}
+
+/* pre and code */
+
+code, pre {
+    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "DejaVu Sans Mono", Inconsolata, monospace;
+    white-space: pre-wrap;
+}
+pre {
+    padding: 14px;
+    background-color: #F5F5F5;
+}
