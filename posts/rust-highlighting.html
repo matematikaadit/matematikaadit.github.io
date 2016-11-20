@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/static/normalize.css">
 <link rel="stylesheet" type="text/css" href="/static/main.css">
 <link rel="stylesheet" type="text/css" href="/static/rust.css">
+<link rel="stylesheet" type="text/css" href="/static/pygmentize.css">
 </head>
 <body>
 <nav class="site-header">
@@ -53,50 +54,53 @@ below will do this task. Save it as <a href="highlight.rs"><code>highlight.rs</c
 
 Compile it using:
 
-<pre>$ rustup run nightly rustc highlight.rs</pre>
+<div class="highlight"><pre><span class="gp">$</span> rustup run nightly rustc highlight.rs
+</pre></div>
 
 To run the binary, you need this hack:
 
-<pre>$ LD_LIBRARY_PATH="$(rustup run nightly rustc --print sysroot)/lib" \
-./highlight &lt; mycode.rs</pre>
+<div class="highlight"><pre><span class="gp">$</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>rustup run nightly rustc --print sysroot<span class="k">)</span><span class="s2">/lib&quot;</span> <span class="se">\</span>
+./highlight &lt; mycode.rs
+</pre></div>
 
 <p>You can already transform any rust code to a rendered html output. But to
 make it colorful, you need the css from librustdoc. The easiest way
 is by grabbing it from any rust project documentation.</p>
 
-<p>Below some rules that relevant, cherry-picked from librustdoc repository.</p>
+<p>Below some rules that relevant, cherry-picked from librustdoc repository.
+Also available as file in <a href="rust.css">rust.css</a></p>
 
 <!-- bash
     $ wget https://raw.githubusercontent.com/rust-lang/rust/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/static/{rustdoc,styles/main}.css
     $ sed -n -e '/pre[^}]*$/,/}/p;/pre.*{.*}/p' rustdoc.css main.css
     $ # delete unneeded rules
 -->
-<pre>code, pre {
-    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "DejaVu Sans Mono", Inconsolata, monospace;
-    white-space: pre-wrap;
-}
-pre {
-    padding: 14px;
-}
-pre.rust .kw { color: #8959A8; }
-pre.rust .kw-2, pre.rust .prelude-ty { color: #4271AE; }
-pre.rust .number, pre.rust .string { color: #718C00; }
-pre.rust .self, pre.rust .bool-val, pre.rust .prelude-val,
-pre.rust .attribute, pre.rust .attribute .ident { color: #C82829; }
-pre.rust .attribute, pre.rust .attribute .ident { color: #C82829; }
-pre.rust .macro, pre.rust .macro-nonterminal { color: #3E999F; }
-pre.rust .lifetime { color: #B76514; }
-pre.rust .question-mark {
-    color: #ff9011;
-    font-weight: bold;
-}
-pre.rust { position: relative; }
-pre {
-    background-color: #F5F5F5;
-}
-pre.rust .comment { color: #8E908C; }
-pre.rust .doccomment { color: #4D4D4C; }
-</pre>
+<div class="highlight"><pre><span class="nt">code</span><span class="o">,</span> <span class="nt">pre</span> <span class="p">{</span>
+    <span class="nb">font-family</span><span class="o">:</span> <span class="s2">&quot;Source Code Pro&quot;</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&quot;DejaVu Sans Mono&quot;</span><span class="o">,</span> <span class="n">Inconsolata</span><span class="o">,</span> <span class="nb">monospace</span><span class="p">;</span>
+    <span class="nb">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">pre</span> <span class="p">{</span>
+    <span class="nb">padding</span><span class="o">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.kw</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#8959A8</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.kw-2</span><span class="o">,</span> <span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.prelude-ty</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#4271AE</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.number</span><span class="o">,</span> <span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.string</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#718C00</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.self</span><span class="o">,</span> <span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.bool-val</span><span class="o">,</span> <span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.prelude-val</span><span class="o">,</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.attribute</span><span class="o">,</span> <span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.attribute</span> <span class="nc">.ident</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#C82829</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.attribute</span><span class="o">,</span> <span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.attribute</span> <span class="nc">.ident</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#C82829</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.macro</span><span class="o">,</span> <span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.macro-nonterminal</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#3E999F</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.lifetime</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#B76514</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.question-mark</span> <span class="p">{</span>
+    <span class="nb">color</span><span class="o">:</span> <span class="m">#ff9011</span><span class="p">;</span>
+    <span class="nb">font-weight</span><span class="o">:</span> <span class="nb">bold</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="p">{</span> <span class="nb">position</span><span class="o">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span> <span class="p">{</span>
+    <span class="nb">background-color</span><span class="o">:</span> <span class="m">#F5F5F5</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.comment</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#8E908C</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">pre</span><span class="nc">.rust</span> <span class="nc">.doccomment</span> <span class="p">{</span> <span class="nb">color</span><span class="o">:</span> <span class="m">#4D4D4C</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
 <!-- extra font -->
 <!-- bash
     $ wget https://raw.githubusercontent.com/rust-lang/rust/cae6ab1c458ade22b4c228fcd4195917c96e2465/src/librustdoc/html/static/SourceCodePro-{LICENSE.txt,Regular.woff,Semibold.woff}
