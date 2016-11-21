@@ -96,7 +96,7 @@ a {
 .content td h1, .content td h2 { margin-left: 0; font-size: 1.1em; }
 
 .site-header, .content, .footer {
-    border-bottom: 1px dashed #D5D5D5;
+    border-bottom: 2px dashed #D5D5D5;
 }
 
 /* post header */

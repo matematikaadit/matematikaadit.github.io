@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where to put the turbofish</title>
+<link rel="stylesheet" type="text/css" href="/static/normalize.css">
+<link rel="stylesheet" type="text/css" href="/static/main.css">
+<link rel="stylesheet" type="text/css" href="/static/rust.css">
+</head>
+<body>
+<nav class="site-header">
+    <h1><a href="/"><code class="site-logo">[ ]</code> matematikaadit</a></h1>
+</nav>
+<section class="content">
+<header>
+    <h1>Where to put the turbofish</h1>
+    <p class="meta"><time datetime="2016-11-21T05:12:46.756Z">Nov 21, 2016</time></p>
+</header>
+
+<p>In a case that you need to specify the concrete type for a generic
+function, method, struct, or enum, rust has this special syntax that's called
+the turbofish. The rule of thumb is, whenever you see:</p>
+<pre class='rust '>
+<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>ident</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>
+</pre>
+<p>in any kind of definition, then in an expression context you usually need to
+write:</p>
+<pre class='rust '>
+<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>ident</span>::<span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>
+</pre>
+
+<p>to specify the type for the generic parameter. Here a few examples of common
+usage of this syntax. Divided into a few categories.</p>
+
+<h3>Generic Function</h3>
+
+<p>The most common usage is for those who use <code>size_of()</code> function.
+The <code>std::mem::size_of()</code> has this signature:</p>
+<pre class='rust '>
+<span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>size_of</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>() <span class='op'>-&gt;</span> <span class='ident'>usize</span>
+</pre>
+
+<p>Writing, for example:</p>
+
+<pre class='rust '>
+<span class='ident'>std</span>::<span class='ident'>mem</span>::<span class='ident'>size_of</span>::<span class='op'>&lt;</span><span class='ident'>u8</span><span class='op'>&gt;</span>()
+</pre>
+
+<p>Will tell you what's the size of <code>u8</code> in bytes. It's kind of amazing
+that you can use generic in this way.</p>
+
+<h3>Generic Method</h3>
+
+<p>The <code>parse()</code> method for <code>str</code> is also one of the
+few times that you'll see the turbofish syntax being used. It's signature is:</p>
+
+<pre class='rust '>
+<span class='kw'>fn</span> <span class='ident'>parse</span><span class='op'>&lt;</span><span class='ident'>F</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>F</span>, <span class='ident'>F</span>::<span class='prelude-val'>Err</span><span class='op'>&gt;</span> <span class='kw'>where</span> <span class='ident'>F</span>: <span class='ident'>FromStr</span>
+</pre>
+
+<p>We can use the turbofish to tell the desired type that should be parsed from
+the <code>str</code></p>
+
+<pre class='rust '>
+<span class='string'>&quot;2048&quot;</span>.<span class='ident'>parse</span>::<span class='op'>&lt;</span><span class='ident'>u32</span><span class='op'>&gt;</span>()
+</pre>
+
+<p>Another common example is <code>collect()</code> on <code>Iterator</code>.
+It's type signature:</p>
+
+<pre class='rust '>
+<span class='kw'>fn</span> <span class='ident'>collect</span><span class='op'>&lt;</span><span class='ident'>B</span><span class='op'>&gt;</span>(<span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>B</span> <span class='kw'>where</span> <span class='ident'>B</span>: <span class='ident'>FromIterator</span><span class='op'>&lt;</span><span class='self'>Self</span>::<span class='ident'>Item</span><span class='op'>&gt;</span>
+</pre>
+
+<p>Because the compiler already know the type of <code>Self::Item</code> you're
+collecting, we usually didn't need to specify it. Instead we can write
+<code>_</code> to let the compiler infer it automaticallly. For example,
+collecting into a <code>Vec&lt;u8&gt;</code> from <code>Iterator&lt;Item=u8&gt;</code>can be written as:</p>
+
+<pre class='rust '>
+[<span class='number'>1u8</span>, <span class='number'>2</span>, <span class='number'>3</span>, <span class='number'>4</span>].<span class='ident'>iter</span>().<span class='ident'>collect</span>::<span class='op'>&lt;</span><span class='ident'>Vec</span><span class='op'>&lt;</span>_<span class='op'>&gt;&gt;</span>()
+</pre>
+
+<p>And speaking of <code>Iterator</code>, you also probably forced to use the
+turbofish syntax when using <code>sum()</code> and <code>product()</code> method
+on it. Here the signature for those method:
+
+<pre class='rust '>
+<span class='kw'>fn</span> <span class='ident'>sum</span><span class='op'>&lt;</span><span class='ident'>S</span><span class='op'>&gt;</span>(<span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>S</span> <span class='kw'>where</span> <span class='ident'>S</span>: <span class='ident'>Sum</span><span class='op'>&lt;</span><span class='self'>Self</span>::<span class='ident'>Item</span><span class='op'>&gt;</span>
+<span class='kw'>fn</span> <span class='ident'>product</span><span class='op'>&lt;</span><span class='ident'>P</span><span class='op'>&gt;</span>(<span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>P</span> <span class='kw'>where</span> <span class='ident'>P</span>: <span class='ident'>Product</span><span class='op'>&lt;</span><span class='self'>Self</span>::<span class='ident'>Item</span><span class='op'>&gt;</span>
+</pre>
+
+<p>The sum and product of the first four positive integers can be calculated as:</p>
+
+<pre class='rust '>
+[<span class='number'>1</span>, <span class='number'>2</span>, <span class='number'>3</span>, <span class='number'>4</span>].<span class='ident'>iter</span>().<span class='ident'>sum</span>::<span class='op'>&lt;</span><span class='ident'>u32</span><span class='op'>&gt;</span>()
+[<span class='number'>1</span>, <span class='number'>2</span>, <span class='number'>3</span>, <span class='number'>4</span>].<span class='ident'>iter</span>().<span class='ident'>product</span>::<span class='op'>&lt;</span><span class='ident'>u32</span><span class='op'>&gt;</span>()
+</pre>
+
+<h3>Generic Struct</h3>
+
+<p>In case of the compiler can't infer enough information when creating a generic
+struct, you can also use the turbofish syntax. For example, <code>Vec</code>
+was defined as:</p>
+
+<pre class='rust '>
+<span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> { <span class='comment'>/* fields omitted */</span> }
+</pre>
+
+<p>To use the turbofish syntax, for example when creating a new <code>Vec</code>
+with <code>Vec::new()</code>, you can write it as:</p>
+
+<pre class='rust '>
+<span class='ident'>Vec</span>::<span class='op'>&lt;</span><span class='ident'>u8</span><span class='op'>&gt;</span>::<span class='ident'>new</span>()
+</pre>
+
+<p>Take a note that we put the turbofish after the <code>Vec</code>, not the
+<code>new</code> method. Since the ones that generic is the vector struct, not the
+method. Bear with me for this one, since it's still follow the rule of thumb
+above.</p>
+
+<p>And yes, you can do this to all rust collections. See <code>HashSet</code> for
+another example. Below we create a new <code>HashSet</code> with 10 capacity.</p>
+
+<pre class='rust '>
+<span class='ident'>std</span>::<span class='ident'>collections</span>::<span class='ident'>HashSet</span>::<span class='op'>&lt;</span><span class='ident'>u8</span><span class='op'>&gt;</span>::<span class='ident'>with_capacity</span>(<span class='number'>10</span>)
+</pre>
+
+<p>And the <code>HashSet</code> signature itself:</p>
+
+<pre class='rust '>
+<span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>HashSet</span><span class='op'>&lt;</span><span class='ident'>T</span>, <span class='ident'>S</span> <span class='op'>=</span> <span class='ident'>RandomState</span><span class='op'>&gt;</span> { <span class='comment'>/* fields omitted */</span> }
+</pre>
+
+<p>Still, it all follows the rule of thumb above.</p>
+
+<h3>Generic Enum</h3>
+
+<p>This is ones that didn't follow our rule of thumb. Historically speaking, enum
+in rust isn't scoped by their enum type, hence, we put the turbofish after the
+enum variant, not after their type. To make it clear let's see how we use
+turbofish for <code>Result</code> which is an enum defined as:</p>
+
+<pre class='rust '>
+<span class='attribute'>#[<span class='ident'>must_use</span>]</span>
+<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>T</span>, <span class='ident'>E</span><span class='op'>&gt;</span> {
+    <span class='prelude-val'>Ok</span>(<span class='ident'>T</span>),
+    <span class='prelude-val'>Err</span>(<span class='ident'>E</span>),
+}
+</pre>
+
+<p>We use it like this</p>
+
+<pre class='rust '>
+<span class='prelude-ty'>Result</span>::<span class='prelude-val'>Ok</span>::<span class='op'>&lt;</span><span class='ident'>u8</span>, ()<span class='op'>&gt;</span>(<span class='number'>10</span>)
+<span class='prelude-ty'>Result</span>::<span class='prelude-val'>Err</span>::<span class='op'>&lt;</span><span class='ident'>u8</span>, ()<span class='op'>&gt;</span>(())
+</pre>
+
+<p>See that we put the turbofish after <code>Ok</code> and <code>Err</code>, the
+variant, not after the <code>Result</code> type itself. And also, since that
+variant was available in prelude, actually we can just write it as follow:
+</p>
+
+<pre class='rust '>
+<span class='prelude-val'>Ok</span>::<span class='op'>&lt;</span><span class='ident'>u8</span>, ()<span class='op'>&gt;</span>(<span class='number'>10</span>)
+<span class='prelude-val'>Err</span>::<span class='op'>&lt;</span><span class='ident'>u8</span>, ()<span class='op'>&gt;</span>(())
+</pre>
+
+<p>The same also applies to <code>Option</code>. Which also just an enum defined
+as:</p>
+
+<pre class='rust '>
+<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
+    <span class='prelude-val'>None</span>,
+    <span class='prelude-val'>Some</span>(<span class='ident'>T</span>),
+}
+</pre>
+
+<p>Unwrapping a <code>None</code> value, for example, can be written as:</p>
+
+<pre class='rust '>
+<span class='prelude-val'>None</span>::<span class='op'>&lt;</span><span class='ident'>u8</span><span class='op'>&gt;</span>.<span class='ident'>unwrap</span>()
+</pre>
+
+<h2>Closing</h2>
+
+<p>It's a nice thing to have this syntax, but remember, you can always bind
+the value to a variable using the <code>let</code> syntax and declare the type
+explicitly. For an alternative, there's also a feature in nightly that
+combine the best of those two world. See the <a href="https://github.com/rust-lang/rust/issues/23416">type ascription tracking issue</a> for details.</p>
+
+<h2>Reference</h2>
+
+<ul>
+    <li><a href="https://doc.rust-lang.org/book/generics.html">Generics in the rust book</a></li>
+    <li><a href="https://doc.rust-lang.org/book/syntax-index.html">Rust syntax index</a></li>
+    <li><a href="https://github.com/nrc/rfcs/blob/ascription/text/0000-type-ascription.md">Type Ascription RFC, Rendered</a></li>
+    <li><a href="https://github.com/rust-lang/rust/issues/23416">Tracking issue for Type Ascription</a></li>
+</ul>
+
+</section>
+<nav class="footer">
+    <p class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/static/cc-by-4.0-80x15.png" /></a>
+<br>
+Except where otherwise noted, content on this blog is licensed under a
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</nav>
+<nav id="load-timing" class="meta"></nav>
+
+
+<script>
+function reportLoadTiming() {
+    var p = document.getElementById("load-timing");
+    var timing = window.performance.timing;
+    var loadTime = timing.domContentLoadedEventEnd - timing.navigationStart;
+    p.innerHTML = "(page load time: " + loadTime + " ms)"
+}
+window.addEventListener("load", reportLoadTiming, false);
+</script>
+
+</body>
+</html>
