@@ -31,12 +31,11 @@ write:</p>
 </pre>
 
 <p>to specify the type for the generic parameter. Here a few examples of common
-usage of this syntax. Divided into a few categories.</p>
+usage of this syntax. Divided into four sections.</p>
 
 <h3>Generic Function</h3>
 
-<p>The most common usage is for those who use <code>size_of()</code> function.
-The <code>std::mem::size_of()</code> has this signature:</p>
+<p>The <code>std::mem::size_of()</code> has this signature:</p>
 <pre class='rust '>
 <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>size_of</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>() <span class='op'>-&gt;</span> <span class='ident'>usize</span>
 </pre>
@@ -116,7 +115,7 @@ with <code>Vec::new()</code>, you can write it as:</p>
 </pre>
 
 <p>Take a note that we put the turbofish after the <code>Vec</code>, not the
-<code>new</code> method. Since the ones that generic is the vector struct, not the
+<code>new</code> method. Since the ones that generic is the struct, not the
 method. Bear with me for this one, since it's still follow the rule of thumb
 above.</p>
 
